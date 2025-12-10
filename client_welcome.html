@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+        h1 {
+            font-size: 48px;
+            color: #333;
+        }
+        #continueBtn {
+            margin-top: 30px;
+            padding: 15px 40px;
+            font-size: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        #continueBtn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Welcome to Raghuram General Store</h1>
+<button id="continueBtn" onclick="goToProducts()">CONTINUE</button>
+
+<script>
+    function goToProducts() {
+        window.location.href = "client_products.html";  // redirect to client products page
+    }
+</script>
+
+</body>
+</html>

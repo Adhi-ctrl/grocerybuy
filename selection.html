@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select User Type</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #4CAF50;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .box {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 0 12px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        button {
+            width: 200px;
+            padding: 15px;
+            margin: 10px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            color: white;
+        }
+
+        .admin-btn {
+    background: #ff8800;
+            background-color: #ff8800;
+        }
+        .client-btn {
+            background-color: #4CAF50;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h1>Select User Type</h1>
+
+    <button class="admin-btn" onclick="location.href='Home.html'">
+        ADMIN
+    </button>
+
+    <button class="client-btn" onclick="location.href='client-login.html'">
+        CLIENT
+    </button>
+</div>
+
+</body>
+</html>

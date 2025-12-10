@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <!-- QR Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="header">Raghuram general store</div>
+
+    <!-- QR Section -->
+    <div class="container">
+
+        <!-- Left Form -->
+        <div class="left-box">
+            <h2>Generate QR Code</h2>
+
+            <label>Enter URL:</label>
+            <input type="text" id="url" placeholder="https://example.com">
+
+            <label>Enter QR Code Name:</label>
+            <input type="text" id="qrname" placeholder="myqrcode">
+
+            <button onclick="generateQR()">Generate QR Code</button>
+        </div>
+
+        <!-- Right QR Display -->
+       <div class="right-box">
+    <canvas id="qrCanvas" width="300" height="300"></canvas>
+    <div id="qrNameDisplay"></div>
+
+    <button onclick="downloadQR()" 
+        style="margin-top:20px; padding:12px; background:#06a115; color:white; border:none; border-radius:8px; cursor:pointer; width:200px;">
+        Download QR Code
+    </button>
+</div>
+</div>
+
+    <!-- Product Section -->
+    <div class="product-section">
+        <h2 class="product-title">Add Product</h2>
+
+        <div class="product-grid" id="productGrid">
+            <!-- Add New Product Card -->
+            <div class="product-card add-new" onclick="openAddPopup()">
+                <span class="plus">+</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h2>Add New Product</h2>
+
+            <label>Product Name:</label>
+            <input type="text" id="newProductName">
+
+            <label>Product Image:</label>
+            <input type="file" id="newProductImage">
+
+            <button type="button" onclick="addProduct()">Submit</button>
+            <button class="close-btn" onclick="closeAddPopup()">Cancel</button>
+        </div>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
