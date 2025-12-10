@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ff8800;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .login-box {
+            background: white;
+            width: 320px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+        button {
+            width: 95%;
+            padding: 10px;
+            background: #ff8800;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #e67300;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-box">
+        <h2>Login</h2>
+
+        <form onsubmit="return checkLogin()">
+            <input type="text" id="userid" placeholder="Enter User ID" required>
+            <input type="password" id="password" placeholder="Enter Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function checkLogin() {
+            const id = document.getElementById("userid").value;
+            const pass = document.getElementById("password").value;
+
+            // Your database username/password (static for now)
+            if (id === "adarsh" && pass === "adarsh") {
+                window.location.href = "index.html";  // go to next page
+                return false;
+            } else {
+                alert("Invalid ID or Password");
+                return false;
+            }
+        }
+    </script>
+
+</body>
+</html>
